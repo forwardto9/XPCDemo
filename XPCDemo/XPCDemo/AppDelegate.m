@@ -18,6 +18,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 
      _connectionToService = [[NSXPCConnection alloc] initWithServiceName:@"com.tencent.teg.XPC"];
+//    _connectionToService = [[NSXPCConnection alloc] initWithListenerEndpoint:endpoint];
      _connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(XPCProtocol)];
      [_connectionToService resume];
      

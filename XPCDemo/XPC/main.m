@@ -41,6 +41,7 @@ int main(int argc, const char *argv[])
     
     // Set up the one NSXPCListener for this service. It will handle all incoming connections.
     NSXPCListener *listener = [NSXPCListener serviceListener];
+//    NSXPCListenerEndpoint *endpoint = listener.endpoint;
     listener.delegate = delegate;
     
     // Resuming the serviceListener starts this service. This method does not return.
