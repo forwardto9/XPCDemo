@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2D80D792109C54600F25852 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D80D782109C54600F25852 /* AppDelegate.m */; };
+		C2D80D7C2109C54600F25852 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D80D7B2109C54600F25852 /* ViewController.m */; };
+		C2D80D7E2109C54600F25852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D80D7D2109C54600F25852 /* Assets.xcassets */; };
+		C2D80D812109C54600F25852 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D80D7F2109C54600F25852 /* Main.storyboard */; };
+		C2D80D842109C54600F25852 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D80D832109C54600F25852 /* main.m */; };
+		C2D80D942109C55600F25852 /* XPC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D80D932109C55600F25852 /* XPC.m */; };
+		C2D80D962109C55600F25852 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D80D952109C55600F25852 /* main.m */; };
+		C2D80D9A2109C55600F25852 /* XPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = C2D80D8F2109C55600F25852 /* XPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2D80D982109C55600F25852 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2D80D6C2109C54600F25852 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2D80D8E2109C55600F25852;
+			remoteInfo = XPC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C2D80D9E2109C55600F25852 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				C2D80D9A2109C55600F25852 /* XPC.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C2D80D742109C54600F25852 /* XPCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D80D772109C54600F25852 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C2D80D782109C54600F25852 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C2D80D7A2109C54600F25852 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C2D80D7B2109C54600F25852 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C2D80D7D2109C54600F25852 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2D80D802109C54600F25852 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C2D80D822109C54600F25852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2D80D832109C54600F25852 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2D80D852109C54600F25852 /* XPCDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCDemo.entitlements; sourceTree = "<group>"; };
+		C2D80D8F2109C55600F25852 /* XPC.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = XPC.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D80D912109C55600F25852 /* XPCProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPCProtocol.h; sourceTree = "<group>"; };
+		C2D80D922109C55600F25852 /* XPC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPC.h; sourceTree = "<group>"; };
+		C2D80D932109C55600F25852 /* XPC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPC.m; sourceTree = "<group>"; };
+		C2D80D952109C55600F25852 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2D80D972109C55600F25852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2D80D712109C54600F25852 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2D80D8C2109C55600F25852 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2D80D6B2109C54600F25852 = {
+			isa = PBXGroup;
+			children = (
+				C2D80D762109C54600F25852 /* XPCDemo */,
+				C2D80D902109C55600F25852 /* XPC */,
+				C2D80D752109C54600F25852 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2D80D752109C54600F25852 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2D80D742109C54600F25852 /* XPCDemo.app */,
+				C2D80D8F2109C55600F25852 /* XPC.xpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2D80D762109C54600F25852 /* XPCDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C2D80D772109C54600F25852 /* AppDelegate.h */,
+				C2D80D782109C54600F25852 /* AppDelegate.m */,
+				C2D80D7A2109C54600F25852 /* ViewController.h */,
+				C2D80D7B2109C54600F25852 /* ViewController.m */,
+				C2D80D7D2109C54600F25852 /* Assets.xcassets */,
+				C2D80D7F2109C54600F25852 /* Main.storyboard */,
+				C2D80D822109C54600F25852 /* Info.plist */,
+				C2D80D832109C54600F25852 /* main.m */,
+				C2D80D852109C54600F25852 /* XPCDemo.entitlements */,
+			);
+			path = XPCDemo;
+			sourceTree = "<group>";
+		};
+		C2D80D902109C55600F25852 /* XPC */ = {
+			isa = PBXGroup;
+			children = (
+				C2D80D912109C55600F25852 /* XPCProtocol.h */,
+				C2D80D922109C55600F25852 /* XPC.h */,
+				C2D80D932109C55600F25852 /* XPC.m */,
+				C2D80D952109C55600F25852 /* main.m */,
+				C2D80D972109C55600F25852 /* Info.plist */,
+			);
+			path = XPC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2D80D732109C54600F25852 /* XPCDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2D80D882109C54600F25852 /* Build configuration list for PBXNativeTarget "XPCDemo" */;
+			buildPhases = (
+				C2D80D702109C54600F25852 /* Sources */,
+				C2D80D712109C54600F25852 /* Frameworks */,
+				C2D80D722109C54600F25852 /* Resources */,
+				C2D80D9E2109C55600F25852 /* Embed XPC Services */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2D80D992109C55600F25852 /* PBXTargetDependency */,
+			);
+			name = XPCDemo;
+			productName = XPCDemo;
+			productReference = C2D80D742109C54600F25852 /* XPCDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2D80D8E2109C55600F25852 /* XPC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2D80D9B2109C55600F25852 /* Build configuration list for PBXNativeTarget "XPC" */;
+			buildPhases = (
+				C2D80D8B2109C55600F25852 /* Sources */,
+				C2D80D8C2109C55600F25852 /* Frameworks */,
+				C2D80D8D2109C55600F25852 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XPC;
+			productName = XPC;
+			productReference = C2D80D8F2109C55600F25852 /* XPC.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2D80D6C2109C54600F25852 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "TEG of Tencent";
+				TargetAttributes = {
+					C2D80D732109C54600F25852 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					C2D80D8E2109C55600F25852 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = C2D80D6F2109C54600F25852 /* Build configuration list for PBXProject "XPCDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2D80D6B2109C54600F25852;
+			productRefGroup = C2D80D752109C54600F25852 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2D80D732109C54600F25852 /* XPCDemo */,
+				C2D80D8E2109C55600F25852 /* XPC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2D80D722109C54600F25852 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D80D7E2109C54600F25852 /* Assets.xcassets in Resources */,
+				C2D80D812109C54600F25852 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2D80D8D2109C55600F25852 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2D80D702109C54600F25852 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D80D7C2109C54600F25852 /* ViewController.m in Sources */,
+				C2D80D842109C54600F25852 /* main.m in Sources */,
+				C2D80D792109C54600F25852 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2D80D8B2109C55600F25852 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D80D962109C55600F25852 /* main.m in Sources */,
+				C2D80D942109C55600F25852 /* XPC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2D80D992109C55600F25852 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2D80D8E2109C55600F25852 /* XPC */;
+			targetProxy = C2D80D982109C55600F25852 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C2D80D7F2109C54600F25852 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2D80D802109C54600F25852 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2D80D862109C54600F25852 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C2D80D872109C54600F25852 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C2D80D892109C54600F25852 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XPCDemo/XPCDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 299MFJ63GP;
+				INFOPLIST_FILE = XPCDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.teg.XPCDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C2D80D8A2109C54600F25852 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XPCDemo/XPCDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 299MFJ63GP;
+				INFOPLIST_FILE = XPCDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.teg.XPCDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C2D80D9C2109C55600F25852 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 299MFJ63GP;
+				INFOPLIST_FILE = XPC/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.teg.XPC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C2D80D9D2109C55600F25852 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 299MFJ63GP;
+				INFOPLIST_FILE = XPC/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.teg.XPC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2D80D6F2109C54600F25852 /* Build configuration list for PBXProject "XPCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2D80D862109C54600F25852 /* Debug */,
+				C2D80D872109C54600F25852 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2D80D882109C54600F25852 /* Build configuration list for PBXNativeTarget "XPCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2D80D892109C54600F25852 /* Debug */,
+				C2D80D8A2109C54600F25852 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2D80D9B2109C55600F25852 /* Build configuration list for PBXNativeTarget "XPC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2D80D9C2109C55600F25852 /* Debug */,
+				C2D80D9D2109C55600F25852 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2D80D6C2109C54600F25852 /* Project object */;
+}
