@@ -6,20 +6,30 @@
 //  Copyright © 2018 TEG of Tencent. All rights reserved.
 //
 
+/**
+ 有了XPC的支持，iOS客户端开发将可以划分为基于sandbox的多进程任务
+ 更加具体的说明可以参见
+https://objccn.io/issue-14-4/
+ */
+
+
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var endpoint:NSXPCListenerEndpoint?
+    
+    /// 初始化服务监听
+    let listener:NSXPCListener = NSXPCListener.anonymous()
+    
+    /// 防止被释放
     var proxy:XPCClientProxy?
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         proxy = XPCClientProxy.init()
-        let listener:NSXPCListener = NSXPCListener.anonymous()
-        endpoint = listener.endpoint
         listener.delegate = proxy
         listener.resume()
         return true

@@ -16,12 +16,4 @@
     reply(response);
 }
 
-- (nonnull id)remoteObjectProxy {
-    return self;
-}
-
-- (nonnull id)remoteObjectProxyWithErrorHandler:(nonnull void (^)(NSError * _Nonnull))handler {
-    return self;
-}
-
 @end

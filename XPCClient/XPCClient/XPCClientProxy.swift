@@ -7,11 +7,10 @@
 //
 
 import Foundation
-@objc class XPCClientProxy: NSObject,NSXPCListenerDelegate {
-    @objc var  exportedObject:XPC?
+class XPCClientProxy: NSObject,NSXPCListenerDelegate {
     @objc func listener(_ listener: NSXPCListener, shouldAcceptNewConnection newConnection: NSXPCConnection) -> Bool {
         newConnection.exportedInterface = NSXPCInterface(with: XPCProtocol.self)
-        exportedObject = XPC.init()
+        let exportedObject = XPC.init()
         newConnection.exportedObject = exportedObject
         newConnection.resume()
         return true

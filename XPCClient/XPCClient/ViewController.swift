@@ -12,21 +12,33 @@ class ViewController: UIViewController {
     var connectionToService:NSXPCConnection?
     override func viewDidLoad() {
         super.viewDidLoad()
-        let endpoint =  (UIApplication.shared.delegate as! AppDelegate).endpoint!
+        
+        let endpoint =  (UIApplication.shared.delegate as! AppDelegate).listener.endpoint
         self.connectionToService = NSXPCConnection.init(listenerEndpoint:endpoint)
         self.connectionToService!.remoteObjectInterface = NSXPCInterface(with: XPCProtocol.self)
+        
         self.connectionToService?.resume()
-        
-
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let proxy:XPCProtocol = self.connectionToService!.remoteObjectProxy as! XPCProtocol
-        proxy.upperCaseString("hello") { (result) in
-            print(result ?? "is nil")
+        // 不带回调去获取Proxy
+//        let proxy:XPCProtocol = self.connectionToService!.remoteObjectProxy as! XPCProtocol
+        
+        /// 带回调去获取Proxy
+        let proxy:XPCProtocol = self.connectionToService?.remoteObjectProxyWithErrorHandler({ (error) in
+            // 这里可以用来处理proxy执行的异常
+            print(error)
+        }) as! XPCProtocol
+        proxy.upperCaseString("hello") { [unowned self] (result:String?) in
+            guard (result != nil) else {
+                print("result is nil")
+                self.connectionToService?.invalidate()
+                return
+            }
+            print(result!)
+            self.connectionToService?.invalidate()
         }
     }
     

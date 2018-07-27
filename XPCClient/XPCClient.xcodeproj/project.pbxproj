@@ -42,7 +42,6 @@
 		C2D80DA02109CB3C00F25852 /* XPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPC.h; sourceTree = "<group>"; };
 		C2D80DA12109CB3C00F25852 /* XPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPC.m; sourceTree = "<group>"; };
 		C2D80DA22109CB3C00F25852 /* XPCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCProtocol.h; sourceTree = "<group>"; };
-		C2D80DA42109E8E500F25852 /* XPCClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCClient.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +74,6 @@
 		C2D80D132109A89E00F25852 /* XPCClient */ = {
 			isa = PBXGroup;
 			children = (
-				C2D80DA42109E8E500F25852 /* XPCClient.entitlements */,
 				C2D80DA02109CB3C00F25852 /* XPC.h */,
 				C2D80DA12109CB3C00F25852 /* XPC.m */,
 				C2D80DA22109CB3C00F25852 /* XPCProtocol.h */,
@@ -127,7 +125,7 @@
 						LastSwiftMigration = 0940;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -317,7 +315,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = XPCClient/XPCClient.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 299MFJ63GP;
 				INFOPLIST_FILE = XPCClient/Info.plist;
@@ -325,10 +322,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.teg.XGDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.teg.XPCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e38ec694-36aa-40bf-b25f-e5df73667d86";
-				PROVISIONING_PROFILE_SPECIFIER = xgdemo_dev;
+				PROVISIONING_PROFILE = "863b6929-e58b-498c-8f4e-372568f6e2e3";
+				PROVISIONING_PROFILE_SPECIFIER = common_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "XPCClient/XPCClient-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -341,7 +338,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = XPCClient/XPCClient.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XPCClient/Info.plist;
@@ -349,7 +345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.teg.XGDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.teg.XPCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XPCClient/XPCClient-Bridging-Header.h";
