@@ -21,9 +21,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func crashButton(_ sender: Any) {
+    @IBAction func crashButton(_ sender: UIButton) {
         let alert = UIAlertController(title: "XPC Demo", message: "click button to crash XPC", preferredStyle: .alert)
         let crashAction = UIAlertAction(title: "Crash", style: .default) { (action) in
+            let uiProcessName = ProcessInfo.processInfo.processName
+            print("\(#function) : \(uiProcessName)")
+            print("thread : \(Thread.current)   \(pthread_mach_thread_np(pthread_self())) ")
             alert.dismiss(animated: true, completion: nil)
             
             // 不带回调去获取Proxy
@@ -34,7 +37,12 @@ class ViewController: UIViewController {
                 // 这里可以用来处理proxy执行的异常
                 print(error)
             }) as! XPCProtocol
+            
             proxy.upperCaseString("hello") { [unowned self] (result:String?) in
+                let xpcProcessName = ProcessInfo.processInfo.processName
+                print("\(#function) : \(xpcProcessName)")
+                print("thread : \(Thread.current)  \(pthread_mach_thread_np(pthread_self()))")
+                
                 guard (result != nil) else {
                     print("result is nil")
                     self.connectionToService?.invalidate()
@@ -42,6 +50,8 @@ class ViewController: UIViewController {
                 }
                 print(result!)
                 self.connectionToService?.invalidate()
+                // background thread cannot call UI API
+//                sender.isHidden = false
             }
             
         }

@@ -12,11 +12,9 @@
 
 // This implements the example protocol. Replace the body of this class with the implementation of this service's protocol.
 - (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply {
-    NSArray *a = @[];
-    id b = a[9];
-    NSString *response = [aString uppercaseString];
-    NSString *processName = [[NSProcessInfo processInfo] processName];
-    reply([response stringByAppendingString:processName]);
+//    NSArray *a = @[];
+//    id b = a[9];
+    reply([aString uppercaseString]);
 }
 
 @end
