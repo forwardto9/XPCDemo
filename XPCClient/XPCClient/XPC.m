@@ -14,6 +14,11 @@
 - (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply {
 //    NSArray *a = @[];
 //    id b = a[9];
+    // 逻辑处理放在子线程
+    [NSThread detachNewThreadWithBlock:^{
+        NSLog(@"sub thread");
+    }];
+    
     reply([aString uppercaseString]);
 }
 
