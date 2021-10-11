@@ -9,15 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var connectionToService:NSXPCConnection?
+    let connection = XPCManager.default().connection(with: XPCProtocol.self)
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let endpoint =  (UIApplication.shared.delegate as! AppDelegate).listener.endpoint
-        self.connectionToService = NSXPCConnection.init(listenerEndpoint:endpoint)
-        self.connectionToService!.remoteObjectInterface = NSXPCInterface(with: XPCProtocol.self)
-        
-        self.connectionToService?.resume()
+        connection.resume()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -33,7 +28,7 @@ class ViewController: UIViewController {
             //        let proxy:XPCProtocol = self.connectionToService!.remoteObjectProxy as! XPCProtocol
             
             /// 带回调去获取Proxy
-            let proxy:XPCProtocol = self.connectionToService?.remoteObjectProxyWithErrorHandler({ (error) in
+            let proxy:XPCProtocol = self.connection.remoteObjectProxyWithErrorHandler({ (error) in
                 // 这里可以用来处理proxy执行的异常
                 print(error)
             }) as! XPCProtocol
@@ -43,7 +38,7 @@ class ViewController: UIViewController {
                 
                 guard (result != nil) else {
                     print("result is nil")
-                    self.connectionToService?.invalidate()
+                    self.connection.invalidate()
                     return
                 }
                 print(result!)

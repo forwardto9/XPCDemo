@@ -10,7 +10,7 @@ import Foundation
 class XPCClientProxy: NSObject,NSXPCListenerDelegate {
     @objc func listener(_ listener: NSXPCListener, shouldAcceptNewConnection newConnection: NSXPCConnection) -> Bool {
         newConnection.exportedInterface = NSXPCInterface(with: XPCProtocol.self)
-        let exportedObject = XPC.init()
+        let exportedObject = XPCLogic()
         newConnection.exportedObject = exportedObject
         newConnection.resume()
         return true

@@ -19,19 +19,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    /// 初始化服务监听
-    let listener:NSXPCListener = NSXPCListener.anonymous()
-    
-    /// 防止被释放
-    var proxy:XPCClientProxy?
-    
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        proxy = XPCClientProxy.init()
-        listener.delegate = proxy
-        listener.resume()
+        XPCManager.default().listener(with: XPCClientProxy()).resume()
         return true
     }
 

@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C23001AD27141A0900C6E25E /* XPCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C23001AC27141A0900C6E25E /* XPCManager.m */; };
 		C2D80D152109A89E00F25852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D80D142109A89E00F25852 /* AppDelegate.swift */; };
 		C2D80D172109A89E00F25852 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D80D162109A89E00F25852 /* ViewController.swift */; };
 		C2D80D1A2109A89E00F25852 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D80D182109A89E00F25852 /* Main.storyboard */; };
 		C2D80D1C2109A89F00F25852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D80D1B2109A89F00F25852 /* Assets.xcassets */; };
 		C2D80D1F2109A89F00F25852 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D80D1D2109A89F00F25852 /* LaunchScreen.storyboard */; };
 		C2D80D272109BE8F00F25852 /* XPCClientProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D80D262109BE8F00F25852 /* XPCClientProxy.swift */; };
-		C2D80DA32109CB3C00F25852 /* XPC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D80DA12109CB3C00F25852 /* XPC.m */; };
+		C2D80DA32109CB3C00F25852 /* XPCLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D80DA12109CB3C00F25852 /* XPCLogic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C23001AB27141A0900C6E25E /* XPCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPCManager.h; sourceTree = "<group>"; };
+		C23001AC27141A0900C6E25E /* XPCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPCManager.m; sourceTree = "<group>"; };
 		C2D80D112109A89E00F25852 /* XPCClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D80D142109A89E00F25852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2D80D162109A89E00F25852 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,8 +42,8 @@
 		C2D80D202109A89F00F25852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2D80D262109BE8F00F25852 /* XPCClientProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCClientProxy.swift; sourceTree = "<group>"; };
 		C2D80D9F2109CB3B00F25852 /* XPCClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XPCClient-Bridging-Header.h"; sourceTree = "<group>"; };
-		C2D80DA02109CB3C00F25852 /* XPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPC.h; sourceTree = "<group>"; };
-		C2D80DA12109CB3C00F25852 /* XPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPC.m; sourceTree = "<group>"; };
+		C2D80DA02109CB3C00F25852 /* XPCLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCLogic.h; sourceTree = "<group>"; };
+		C2D80DA12109CB3C00F25852 /* XPCLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCLogic.m; sourceTree = "<group>"; };
 		C2D80DA22109CB3C00F25852 /* XPCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,8 +77,8 @@
 		C2D80D132109A89E00F25852 /* XPCClient */ = {
 			isa = PBXGroup;
 			children = (
-				C2D80DA02109CB3C00F25852 /* XPC.h */,
-				C2D80DA12109CB3C00F25852 /* XPC.m */,
+				C2D80DA02109CB3C00F25852 /* XPCLogic.h */,
+				C2D80DA12109CB3C00F25852 /* XPCLogic.m */,
 				C2D80DA22109CB3C00F25852 /* XPCProtocol.h */,
 				C2D80D142109A89E00F25852 /* AppDelegate.swift */,
 				C2D80D162109A89E00F25852 /* ViewController.swift */,
@@ -85,6 +88,8 @@
 				C2D80D202109A89F00F25852 /* Info.plist */,
 				C2D80D262109BE8F00F25852 /* XPCClientProxy.swift */,
 				C2D80D9F2109CB3B00F25852 /* XPCClient-Bridging-Header.h */,
+				C23001AB27141A0900C6E25E /* XPCManager.h */,
+				C23001AC27141A0900C6E25E /* XPCManager.m */,
 			);
 			path = XPCClient;
 			sourceTree = "<group>";
@@ -117,12 +122,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "TEG of Tencent";
 				TargetAttributes = {
 					C2D80D102109A89E00F25852 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1300;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 0;
@@ -169,8 +174,9 @@
 			files = (
 				C2D80D272109BE8F00F25852 /* XPCClientProxy.swift in Sources */,
 				C2D80D172109A89E00F25852 /* ViewController.swift in Sources */,
+				C23001AD27141A0900C6E25E /* XPCManager.m in Sources */,
 				C2D80D152109A89E00F25852 /* AppDelegate.swift in Sources */,
-				C2D80DA32109CB3C00F25852 /* XPC.m in Sources */,
+				C2D80DA32109CB3C00F25852 /* XPCLogic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +228,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -247,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -282,6 +289,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -301,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -316,6 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 299MFJ63GP;
 				INFOPLIST_FILE = XPCClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -328,7 +337,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = common_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "XPCClient/XPCClient-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -339,6 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XPCClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -349,7 +359,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XPCClient/XPCClient-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -6,9 +6,9 @@
 //  Copyright © 2018 TEG of Tencent. All rights reserved.
 //
 
-#import "XPC.h"
+#import "XPCLogic.h"
 
-@implementation XPC
+@implementation XPCLogic
 
 // This implements the example protocol. Replace the body of this class with the implementation of this service's protocol.
 - (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply {
