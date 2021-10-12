@@ -18,7 +18,11 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "XPC Demo", message: "click button to crash XPC", preferredStyle: .alert)
         let crashAction = UIAlertAction(title: "Crash", style: .default) { (action) in
             alert.dismiss(animated: true, completion: nil)
-            XPCManager.default().listener(with: XPCClientProxy())
+            if #available(iOS 11, *) {
+                XPCManager.default().listener(with: XPCClientProxy())
+            } else {
+                    // Fallback on earlier versions
+            }
             (XPCManager.default().proxy(with: XPCLogicProtocol.self) as? XPCLogicProtocol)? .upperCaseString("hello") { [unowned self] (result:String?) in
                 guard (result != nil) else {
                     print("result is nil")

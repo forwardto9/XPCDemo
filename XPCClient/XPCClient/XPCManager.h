@@ -19,11 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 
     /// 根据实际逻辑执行的代理创建监听者
     /// @param delegate 监听的代理对象，负责将逻辑执行者与连接器关联
-- (nonnull NSXPCListener *)listenerWithDelegate:(nullable id<NSXPCListenerDelegate>)delegate;
+- (nonnull NSXPCListener *)listenerWithDelegate:(nullable id<NSXPCListenerDelegate>)delegate API_AVAILABLE(ios(11));
 
     /// 根据实际逻辑接口创建连接器
     /// @param protocol 实际代码逻辑接口
-- (nonnull NSXPCConnection *)connectionWithProtocol:(nullable Protocol *)protocol;
+- (nonnull NSXPCConnection *)connectionWithProtocol:(nullable Protocol *)protocol API_AVAILABLE(ios(11));
 
     /// 根据接口协议获取代理对象
     /// @param protocol 逻辑接口协议

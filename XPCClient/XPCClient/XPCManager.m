@@ -9,6 +9,7 @@
 #import <objc/message.h>
 #import "XPCManager.h"
 #import "XPCLogicProtocol.h"
+#import "XPCLogic.h"
 
 static void *key = &key;
 static void *key1 = &key1;
@@ -71,10 +72,16 @@ static void *key2 = &key2;
 }
 
 - (id)proxyWithProtocol:(Protocol *)protocol {
-    NSXPCConnection *conn = [self connectionWithProtocol:protocol];
-    id p = [conn remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
-        // 如果此对象在执行接口逻辑时遇到错误，比如crash，则error回调就会被调用，否则不会被触发
-    }];
+    id p;
+    if (@available(iOS 11, *)) {
+        NSXPCConnection *conn = [self connectionWithProtocol:protocol];
+        p = [conn remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
+            // 如果此对象在执行接口逻辑时遇到错误，比如crash，则error回调就会被调用，否则不会被触发
+        }];
+    } else {
+        p = [[XPCLogic alloc] init];
+    }
+    
     return p?:nil;
 }
 
