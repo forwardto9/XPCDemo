@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@protocol XPCLogicProtocol;
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -24,6 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
     /// 根据实际逻辑接口创建连接器
     /// @param protocol 实际代码逻辑接口
 - (nonnull NSXPCConnection *)connectionWithProtocol:(nullable Protocol *)protocol;
+
+    /// 根据接口协议获取代理对象
+    /// @param protocol 逻辑接口协议
+- (nullable id)proxyWithProtocol:(nonnull Protocol *)protocol;
 
 @end
 
