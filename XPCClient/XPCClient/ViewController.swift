@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let connection = XPCManager.default().connection(with: XPCProtocol.self)
+    let connection = XPCManager.default().connection(with: XPCLogicProtocol.self)
     override func viewDidLoad() {
         super.viewDidLoad()
         connection.resume()
@@ -25,13 +25,13 @@ class ViewController: UIViewController {
             alert.dismiss(animated: true, completion: nil)
             
             // 不带回调去获取Proxy
-            //        let proxy:XPCProtocol = self.connectionToService!.remoteObjectProxy as! XPCProtocol
+            //        let proxy:XPCLogicProtocol = self.connectionToService!.remoteObjectProxy as! XPCLogicProtocol
             
             /// 带回调去获取Proxy
-            let proxy:XPCProtocol = self.connection.remoteObjectProxyWithErrorHandler({ (error) in
+            let proxy:XPCLogicProtocol = self.connection.remoteObjectProxyWithErrorHandler({ (error) in
                 // 这里可以用来处理proxy执行的异常
                 print(error)
-            }) as! XPCProtocol
+            }) as! XPCLogicProtocol
             
             proxy.upperCaseString("hello") { [unowned self] (result:String?) in
                 print("upperCaseString() in thread : \(Thread.current)  \(pthread_mach_thread_np(pthread_self()))")

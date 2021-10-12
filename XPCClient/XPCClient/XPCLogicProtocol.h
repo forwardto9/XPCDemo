@@ -1,5 +1,5 @@
 //
-//  XPCProtocol.h
+//  XPCLogicProtocol.h
 //  XPC
 //
 //  Created by uwei on 2018/7/26.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 // The protocol that this service will vend as its API. This header file will also need to be visible to the process hosting the service.
-@protocol XPCProtocol
+@protocol XPCLogicProtocol
 
 // Replace the API of this protocol with an API appropriate to the service you are vending.
 - (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply;
@@ -20,7 +20,7 @@
  To use the service from an application or other process, use NSXPCConnection to establish a connection to the service by doing something like this:
 
      _connectionToService = [[NSXPCConnection alloc] initWithServiceName:@"com.tencent.teg.XPC"];
-     _connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(XPCProtocol)];
+     _connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(XPCLogicProtocol)];
      [_connectionToService resume];
 
 Once you have a connection to the service, you can use it like this:

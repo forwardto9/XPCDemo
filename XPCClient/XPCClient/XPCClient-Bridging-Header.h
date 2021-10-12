@@ -3,6 +3,6 @@
 //
 
 #import "XPCLogic.h"
-#import "XPCProtocol.h"
+#import "XPCLogicProtocol.h"
 #include <pthread.h>
 #import "XPCManager.h"

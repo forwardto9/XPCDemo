@@ -44,7 +44,7 @@
 		C2D80D9F2109CB3B00F25852 /* XPCClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XPCClient-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2D80DA02109CB3C00F25852 /* XPCLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCLogic.h; sourceTree = "<group>"; };
 		C2D80DA12109CB3C00F25852 /* XPCLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCLogic.m; sourceTree = "<group>"; };
-		C2D80DA22109CB3C00F25852 /* XPCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCProtocol.h; sourceTree = "<group>"; };
+		C2D80DA22109CB3C00F25852 /* XPCLogicProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCLogicProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,19 +77,19 @@
 		C2D80D132109A89E00F25852 /* XPCClient */ = {
 			isa = PBXGroup;
 			children = (
-				C2D80DA02109CB3C00F25852 /* XPCLogic.h */,
-				C2D80DA12109CB3C00F25852 /* XPCLogic.m */,
-				C2D80DA22109CB3C00F25852 /* XPCProtocol.h */,
 				C2D80D142109A89E00F25852 /* AppDelegate.swift */,
 				C2D80D162109A89E00F25852 /* ViewController.swift */,
 				C2D80D182109A89E00F25852 /* Main.storyboard */,
 				C2D80D1B2109A89F00F25852 /* Assets.xcassets */,
 				C2D80D1D2109A89F00F25852 /* LaunchScreen.storyboard */,
 				C2D80D202109A89F00F25852 /* Info.plist */,
-				C2D80D262109BE8F00F25852 /* XPCClientProxy.swift */,
 				C2D80D9F2109CB3B00F25852 /* XPCClient-Bridging-Header.h */,
 				C23001AB27141A0900C6E25E /* XPCManager.h */,
 				C23001AC27141A0900C6E25E /* XPCManager.m */,
+				C2D80DA22109CB3C00F25852 /* XPCLogicProtocol.h */,
+				C2D80DA02109CB3C00F25852 /* XPCLogic.h */,
+				C2D80DA12109CB3C00F25852 /* XPCLogic.m */,
+				C2D80D262109BE8F00F25852 /* XPCClientProxy.swift */,
 			);
 			path = XPCClient;
 			sourceTree = "<group>";
