@@ -28,6 +28,7 @@ class ViewController: UIViewController {
                     print("result is nil")
                     return
                 }
+                print(NSXPCConnection.current()?.processIdentifier ?? "0000")
                 print("XPC callback:\(result ?? " result is nil")")
                 DispatchQueue.main.async {
                     sender.setTitle("change me \(Int.random(in: 1...5))", for: .normal)

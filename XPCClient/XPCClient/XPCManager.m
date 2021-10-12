@@ -67,7 +67,12 @@ static void *key2 = &key2;
         conn = [[NSXPCConnection alloc] initWithListenerEndpoint:endpoint];;
         objc_setAssociatedObject(self, &key2, conn, OBJC_ASSOCIATION_RETAIN);
         [conn resume];
+        // 监听远程进程的 exit or crash
+        conn.interruptionHandler = ^{
+            NSLog(@"%s crashed or exited", __FUNCTION__);
+        };
     }
+    NSLog(@"%s pid = %d service name:%@", __FUNCTION__, conn.processIdentifier, conn.serviceName);
     return  conn;
 }
 
