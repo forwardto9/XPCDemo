@@ -15,7 +15,19 @@
 		C2D80D1F2109A89F00F25852 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D80D1D2109A89F00F25852 /* LaunchScreen.storyboard */; };
 		C2D80D272109BE8F00F25852 /* XPCClientProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D80D262109BE8F00F25852 /* XPCClientProxy.swift */; };
 		C2D80DA32109CB3C00F25852 /* XPCLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D80DA12109CB3C00F25852 /* XPCLogic.m */; };
+		C2EF9A2A2715808A00BBB7A8 /* XPCClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EF9A292715808A00BBB7A8 /* XPCClientTests.swift */; };
+		C2EF9A302715845F00BBB7A8 /* XPCClientProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D80D262109BE8F00F25852 /* XPCClientProxy.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2EF9A2B2715808A00BBB7A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2D80D092109A89E00F25852 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2D80D102109A89E00F25852;
+			remoteInfo = XPCClient;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C2D80DB52109E8FC00F25852 /* Embed App Extensions */ = {
@@ -45,10 +57,19 @@
 		C2D80DA02109CB3C00F25852 /* XPCLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCLogic.h; sourceTree = "<group>"; };
 		C2D80DA12109CB3C00F25852 /* XPCLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCLogic.m; sourceTree = "<group>"; };
 		C2D80DA22109CB3C00F25852 /* XPCLogicProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCLogicProtocol.h; sourceTree = "<group>"; };
+		C2EF9A272715808A00BBB7A8 /* XPCClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPCClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2EF9A292715808A00BBB7A8 /* XPCClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C2D80D0E2109A89E00F25852 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2EF9A242715808A00BBB7A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				C2D80D132109A89E00F25852 /* XPCClient */,
+				C2EF9A282715808A00BBB7A8 /* XPCClientTests */,
 				C2D80D122109A89E00F25852 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				C2D80D112109A89E00F25852 /* XPCClient.app */,
+				C2EF9A272715808A00BBB7A8 /* XPCClientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +117,14 @@
 			path = XPCClient;
 			sourceTree = "<group>";
 		};
+		C2EF9A282715808A00BBB7A8 /* XPCClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2EF9A292715808A00BBB7A8 /* XPCClientTests.swift */,
+			);
+			path = XPCClientTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,13 +146,31 @@
 			productReference = C2D80D112109A89E00F25852 /* XPCClient.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C2EF9A262715808A00BBB7A8 /* XPCClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2EF9A2D2715808A00BBB7A8 /* Build configuration list for PBXNativeTarget "XPCClientTests" */;
+			buildPhases = (
+				C2EF9A232715808A00BBB7A8 /* Sources */,
+				C2EF9A242715808A00BBB7A8 /* Frameworks */,
+				C2EF9A252715808A00BBB7A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2EF9A2C2715808A00BBB7A8 /* PBXTargetDependency */,
+			);
+			name = XPCClientTests;
+			productName = XPCClientTests;
+			productReference = C2EF9A272715808A00BBB7A8 /* XPCClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C2D80D092109A89E00F25852 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "TEG of Tencent";
 				TargetAttributes = {
@@ -133,6 +182,10 @@
 								enabled = 0;
 							};
 						};
+					};
+					C2EF9A262715808A00BBB7A8 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C2D80D102109A89E00F25852;
 					};
 				};
 			};
@@ -150,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				C2D80D102109A89E00F25852 /* XPCClient */,
+				C2EF9A262715808A00BBB7A8 /* XPCClientTests */,
 			);
 		};
 /* End PBXProject section */
@@ -162,6 +216,13 @@
 				C2D80D1F2109A89F00F25852 /* LaunchScreen.storyboard in Resources */,
 				C2D80D1C2109A89F00F25852 /* Assets.xcassets in Resources */,
 				C2D80D1A2109A89E00F25852 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2EF9A252715808A00BBB7A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +241,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2EF9A232715808A00BBB7A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2EF9A2A2715808A00BBB7A8 /* XPCClientTests.swift in Sources */,
+				C2EF9A302715845F00BBB7A8 /* XPCClientProxy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2EF9A2C2715808A00BBB7A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2D80D102109A89E00F25852 /* XPCClient */;
+			targetProxy = C2EF9A2B2715808A00BBB7A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C2D80D182109A89E00F25852 /* Main.storyboard */ = {
@@ -366,6 +444,61 @@
 			};
 			name = Release;
 		};
+		C2EF9A2E2715808A00BBB7A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 299MFJ63GP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.teg.XPCClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "XPCClient/XPCClient-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XPCClient.app/XPCClient";
+			};
+			name = Debug;
+		};
+		C2EF9A2F2715808A00BBB7A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 299MFJ63GP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.teg.XPCClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "XPCClient/XPCClient-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XPCClient.app/XPCClient";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -383,6 +516,15 @@
 			buildConfigurations = (
 				C2D80D242109A89F00F25852 /* Debug */,
 				C2D80D252109A89F00F25852 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2EF9A2D2715808A00BBB7A8 /* Build configuration list for PBXNativeTarget "XPCClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2EF9A2E2715808A00BBB7A8 /* Debug */,
+				C2EF9A2F2715808A00BBB7A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

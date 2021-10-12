@@ -17,8 +17,8 @@
     // 如果在自有线程中还有自建线程的处理，类似以下的话，crash就会导致app退出
 //    [NSThread detachNewThreadWithBlock:^{
 //        NSLog(@"sub thread");
-        NSArray *a = @[];
-        id b = a[9];
+//        NSArray *a = @[];
+//        id b = a[9];
 //    }];
 
     reply([aString uppercaseString]);
