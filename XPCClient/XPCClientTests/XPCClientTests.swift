@@ -20,17 +20,39 @@ class XPCClientTests: XCTestCase {
     }
     
     func testLogic() throws {
-        if #available(iOS 11, *) {
-            XPCManager.default().listener(with: XPCClientProxy())
-        } else {
-                // Fallback on earlier versions
-        }
+        startListener()
         (XPCManager.default().proxy(with: XPCLogicProtocol.self) as? XPCLogicProtocol)? .upperCaseString("hello") { [unowned self] (result:String?) in
             guard (result != nil) else {
                 print("result is nil")
                 return
             }
             print("XPC callback:\(result ?? " result is nil")")
+        }
+    }
+    
+    func testLogicWithCustonType() throws {
+        startListener()
+        (XPCManager.default().proxy(with: XPCLogicProtocol.self) as? XPCLogicProtocol)?.custom(dataReply: { data in
+            print(data?.sex ?? "")
+            print(data?.name ?? "")
+            print(data?.extInfo ?? "")
+        })
+        
+        let data = XPCCustomData()
+        data.name = "app";
+        data.sex = false;
+        data.extInfo = ["k":"v"]
+        (XPCManager.default().proxy(with: XPCLogicProtocol.self) as? XPCLogicProtocol)?.custom(with: data, reply: { result in
+            print(result?.sex ?? "")
+            print(result?.name ?? "")
+        })
+    }
+    
+    func startListener() {
+        if #available(iOS 11, *) {
+            XPCManager.default().listener(with: XPCClientProxy())
+        } else {
+                // Fallback on earlier versions
         }
     }
 

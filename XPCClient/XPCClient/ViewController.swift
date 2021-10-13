@@ -34,21 +34,6 @@ class ViewController: UIViewController {
                     sender.setTitle("change me \(Int.random(in: 1...5))", for: .normal)
                 }
             }
-            
-            (XPCManager.default().proxy(with: XPCLogicProtocol.self) as? XPCLogicProtocol)?.custom(dataReply: { data in
-                print(data?.sex ?? "")
-                print(data?.name ?? "")
-                print(data?.extInfo ?? "")
-            })
-            
-            let data = XPCCustomData()
-            data.name = "app";
-            data.sex = false;
-            data.extInfo = ["k":"v"]
-            (XPCManager.default().proxy(with: XPCLogicProtocol.self) as? XPCLogicProtocol)?.custom(with: data, reply: { result in
-                print(result?.sex ?? "")
-                print(result?.name ?? "")
-            })
         }
         alert.addAction(crashAction)
         
