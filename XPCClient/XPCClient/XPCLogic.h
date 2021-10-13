@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "XPCLogicProtocol.h"
 
+@interface XPCCustomData : NSObject<NSSecureCoding>
+
+@property (nullable, nonatomic, copy) NSString *name;
+@property (assign) BOOL sex;
+@property (nullable, nonatomic, strong) NSDictionary *extInfo;
+
+@end
+
 // This object implements the protocol which we have defined. It provides the actual behavior for the service. It is 'exported' by the service to make it available to the process hosting the service over an NSXPCConnection.
 @interface XPCLogic : NSObject <XPCLogicProtocol>
 @end

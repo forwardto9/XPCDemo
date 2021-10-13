@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 @protocol XPCLogicProtocol;
 NS_ASSUME_NONNULL_BEGIN
-
-
-    /// XPC管理实现类
+/**
+ XPC管理实现类
+ @seealso [Creating XPC Services](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingXPCServices.html)
+ */
 @interface XPCManager : NSObject
 
     /// XPC管理者单例

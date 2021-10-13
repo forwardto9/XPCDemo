@@ -37,7 +37,16 @@ static void *key2 = &key2;
 
 - (NSXPCConnection *)connectionWithProtocol:(Protocol *)protocol {
     NSXPCConnection *conn = self.connection;
-    conn.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:protocol];
+    NSXPCInterface *interface = [NSXPCInterface interfaceWithProtocol:protocol];
+    
+    // 声明接口支持的数据类型
+    // 自定义数据类型是必须的
+    // 成员变量的类型是可选的，如果某一个成员变量的类型不会被使用到，则对应的数据类型可以不声明
+    NSSet *expectedClasses = [NSSet setWithObjects:[XPCCustomData class],[NSString class], [NSDictionary class], nil];
+    [interface setClasses:expectedClasses forSelector:@selector(customWithDataReply:) argumentIndex:0 ofReply:YES];
+    
+    [interface setClasses:expectedClasses forSelector:@selector(customWithData:reply:) argumentIndex:0 ofReply:YES];
+    conn.remoteObjectInterface = interface;
     return conn;
 }
 
@@ -66,11 +75,24 @@ static void *key2 = &key2;
     } else {
         conn = [[NSXPCConnection alloc] initWithListenerEndpoint:endpoint];;
         objc_setAssociatedObject(self, &key2, conn, OBJC_ASSOCIATION_RETAIN);
-        [conn resume];
         // 监听远程进程的 exit or crash
         conn.interruptionHandler = ^{
+            // TODO: -
+            // to provide enough contextual information—perhaps a pending operation queue and the connection object itself—so that your handler code can do something sensible, such as retrying pending operations, tearing down the connection, displaying an error dialog, or whatever other actions make sense in your particular app.
+            
+
             NSLog(@"%s crashed or exited", __FUNCTION__);
         };
+        
+        // resume失败或者是向connection发送invalid消息
+        conn.invalidationHandler = ^{
+            // TODO: -
+            // to provide enough contextual information—perhaps a pending operation queue and the connection object itself—so that your handler code can do something sensible, such as retrying pending operations, tearing down the connection, displaying an error dialog, or whatever other actions make sense in your particular app.
+            
+
+            NSLog(@"connection is invalidate");
+        };
+        [conn resume];
     }
     NSLog(@"%s pid = %d service name:%@", __FUNCTION__, conn.processIdentifier, conn.serviceName);
     return  conn;

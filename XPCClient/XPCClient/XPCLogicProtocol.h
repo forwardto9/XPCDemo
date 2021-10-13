@@ -8,11 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class XPCCustomData;
 // The protocol that this service will vend as its API. This header file will also need to be visible to the process hosting the service.
 @protocol XPCLogicProtocol
 
 // Replace the API of this protocol with an API appropriate to the service you are vending.
 - (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply;
+
+// pass custom data only from logic to app
+- (void)customWithDataReply:(void (^)(XPCCustomData *))reply;
+
+// pass custom data two-way
+- (void)customWithData:(XPCCustomData *)data reply:(void (^)(XPCCustomData *))reply;
     
 @end
 
