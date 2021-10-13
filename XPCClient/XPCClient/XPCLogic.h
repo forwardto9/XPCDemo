@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "XPCLogicProtocol.h"
 
+    /// 自定义数据类型
+    /// 为了能够通过Connection传递，需要遵循NSSecureCoding协议
 @interface XPCCustomData : NSObject<NSSecureCoding>
 
 @property (nullable, nonatomic, copy) NSString *name;
